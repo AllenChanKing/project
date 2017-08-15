@@ -1,0 +1,52 @@
+{{#extend "stylesheets"}}
+    <link rel="stylesheet" href="/stylesheets/swiper.min.css">
+    <link rel="stylesheet" href="/stylesheets/index/index.css?v={{config.front_version}}">
+{{/extend}}
+
+<div id="container">
+    {{> header}}
+    <section class="banner" @click="getInfo()">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="/images/index/banner1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="/images/index/banner1.jpg" alt="">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </section>
+    -----node 渲染数据-----
+    {{#each list}}
+        <p>{{this.content}}</p>
+    {{/each}}
+
+    -----vue 渲染数据-----
+    <p v-for="item in list" v-text="item.content"></p>
+
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+    <p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p><p>asdfas</p>
+</div>
+
+
+{{#extend "scripts"}}
+    <script src="/javascripts/lib/swiper.min.js"></script>
+    <script src="/javascripts/index/index.js?v={{config.front_version}}"></script>
+{{/extend}}
+
